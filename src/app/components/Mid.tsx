@@ -21,8 +21,8 @@ const AboutMe = () => {
         transition={{ duration: 0.3 }}
       >
         <img
-          src="/web.png"
-          alt="Web"
+          src="/mid.png"
+          alt="About Me"
           className="w-full h-full object-cover"
         />
       </motion.div>

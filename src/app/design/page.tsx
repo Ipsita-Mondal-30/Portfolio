@@ -8,6 +8,9 @@ import Posters from '../components/Posters';
 import Logo from '../components/Logo';
 import PosterAbout from "../components/PosterAbout";
 import Illustration from '../components/Illustration';
+import Carousel from '../components/Carousel';
+import Footer from '../components/Footer';
+import Mid from '../components/Mid';
 
 export default function Home() {
   return (
@@ -20,6 +23,9 @@ export default function Home() {
       <PosterAbout/>
       <Logo/>
       <Illustration/>
+      <Carousel/>
+      <Mid/>
+      <Footer/>
      
     </div>
   );
