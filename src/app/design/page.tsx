@@ -11,11 +11,13 @@ import Illustration from '../components/Illustration';
 import Carousel from '../components/Carousel';
 import Footer from '../components/Footer';
 import Mid from '../components/Mid';
+import LeftBar from '../components/LeftBar';
 
 export default function Home() {
   return (
     <div >
       <HeroDesign />
+      <LeftBar/>
       <AboutMe/>
       <WhatIDo/>
       <IntroToWork/>
