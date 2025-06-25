@@ -13,7 +13,8 @@ const HeroDesign = () => {
 
   return (
     <motion.section 
-      className="relative h-screen w-full overflow-hidden"
+      className="relative w-full overflow-hidden"
+      style={{ height: '100dvh' }}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1.5 }}
@@ -29,8 +30,7 @@ const HeroDesign = () => {
         <source src="/Intro.mp4" type="video/mp4" />
       </video>
       
-      
-      {/* Optional floating elements for extra visual interest */}
+      {/* Optional floating elements */}
       <motion.div
         className="absolute top-1/4 right-1/4 w-2 h-2 bg-white rounded-full opacity-60"
         animate={{
