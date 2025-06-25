@@ -7,6 +7,7 @@ import IntroToWork from '../components/IntroToWork';
 import Posters from '../components/Posters';
 import Logo from '../components/Logo';
 import PosterAbout from "../components/PosterAbout";
+import Illustration from '../components/Illustration';
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <Posters/>
       <PosterAbout/>
       <Logo/>
+      <Illustration/>
      
     </div>
   );
