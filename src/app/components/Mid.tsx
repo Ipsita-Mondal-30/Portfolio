@@ -24,6 +24,8 @@ const AboutMe = () => {
         <Image
           src="/mid.png"
           alt="About Me"
+          width={600}
+          height={400}
           className="w-full h-full object-cover"
         />
       </motion.div>

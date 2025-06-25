@@ -15,7 +15,7 @@ const Footer: React.FC = () => {
     {
       name: 'Graphic Design Portfolio',
       icon: FileText,
-      url: 'https://drive.google.com/file/d/1h11K6GsnoV1A1CPeNouWpe97nBFYyErB/view?usp=drive_link', // replace with your actual ID
+      url: 'https://drive.google.com/file/d/1h11K6GsnoV1A1CPeNouWpe97nBFYyErB/view?usp=sharing', // replace with your actual ID
       color: 'hover:text-purple-400',
     },
     {

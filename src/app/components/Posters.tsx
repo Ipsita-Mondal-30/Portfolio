@@ -127,6 +127,8 @@ const Posters = () => {
                 <Image
                   src={poster}
                   alt={`Poster ${index + 1}`}
+                  width={600}
+          height={400}
                   className="w-full h-48 md:h-64 lg:h-80 object-cover transition-transform duration-300 group-hover:scale-110"
                 />
                                 

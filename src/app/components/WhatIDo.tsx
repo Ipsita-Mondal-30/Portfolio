@@ -25,6 +25,8 @@ const WhatIDo = () => {
           <Image
             src="/what-i-do.png"
             alt="What I Do"
+            width={600}
+          height={400}
             className="w-full h-full object-cover"
           />
           

@@ -120,11 +120,13 @@ const ModeCard: FC<ModeCardProps> = ({ title, description, image, onClick }) => 
       style={{ zIndex: 10 }}
     >
       <div className="aspect-video relative overflow-hidden">
-        <Image
-          src={image}
-          alt={title}
-          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-        />
+      <Image
+  src={image}
+  alt={title}
+  width={600}
+  height={400}
+  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+/>
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
       </div>
       
@@ -195,11 +197,11 @@ const Mode: FC = () => {
           transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
         >
           <ModeCard
-            title="Design Side"
-            description="Explore my creative design work, and visual storytelling"
-            image="./design.png"
-            onClick={handleDesignClick}
-          />
+  title="Design Side"
+  description="Explore my creative design work, and visual storytelling"
+  image="/design.png" // ✅ fixed path
+  onClick={handleDesignClick}
+/>
           
           <ModeCard
             title="Tech Side"
