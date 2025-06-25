@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { Linkedin, ExternalLink, FileText, Heart } from 'lucide-react';
+import { Linkedin,  FileText, Heart } from 'lucide-react';
 
 interface SocialLink {
   name: string;
@@ -45,12 +45,12 @@ const Footer: React.FC = () => {
             className="text-5xl md:text-6xl font-bold mb-8 transition-all duration-300 hover:scale-105"
             style={{ color: '#8f5cae' }}
           >
-            Let's Connect
+            Let&apos;s Connect
           </h2>
           
           {/* Description */}
           <p className="text-xl text-gray-900 mb-12 max-w-2xl mx-auto leading-relaxed">
-            Ready to bring your ideas to life? Let's collaborate and create something amazing together.
+            Ready to bring your ideas to life? Let&apos;s collaborate and create something amazing together.
           </p>
           
           {/* Social Links */}

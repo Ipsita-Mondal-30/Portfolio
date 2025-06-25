@@ -59,10 +59,9 @@ const ContactSection: React.FC = () => {
   return (
     <div className="min-h-screen py-20" id="contact">
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-4xl font-bold mb-12 bg-gradient-to-r from-[#00ced1] to-[#00ced1] bg-clip-text text-transparent">
-          Let's Connect
-        </h2>
-
+      <h2 className="text-4xl font-bold mb-12 bg-gradient-to-r from-[#00ced1] to-[#00ced1] bg-clip-text text-transparent">
+  Let&apos;s Connect
+</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {/* Contact Form */}
           <div className="space-y-6">

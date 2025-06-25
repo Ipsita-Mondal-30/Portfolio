@@ -1,11 +1,11 @@
 'use client';
 
 import React, { useState, useEffect, useRef } from 'react';
-import { Code2, Users, Briefcase, Brain, Rocket, Palette, Globe, Award, Building } from 'lucide-react';
+import { Code2, Users, Briefcase,  Rocket, Palette, Globe, Award, Building } from 'lucide-react';
 
 interface Experience {
   title: string;
-  icon: any;
+  icon: unknown;
   description: string;
   type: string;
   color: string;

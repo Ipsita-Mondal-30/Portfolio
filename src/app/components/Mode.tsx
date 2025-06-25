@@ -1,4 +1,4 @@
-import { useRef, useEffect, FC, useState } from "react";
+import { useRef, useEffect, FC } from "react";
 import { motion } from "framer-motion";
 import { useRouter } from 'next/navigation';
 

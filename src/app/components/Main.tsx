@@ -1,14 +1,14 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { Code2, Smartphone, Server, Box, Send, Download, Terminal } from 'lucide-react';
+import { Code2, Smartphone, Server, Box, Send,  Terminal } from 'lucide-react';
 
 const Main = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [typedText, setTypedText] = useState('');
   const fullText = 'Full Stack Developer';
   const [hoveredSkill, setHoveredSkill] = useState<string | null>(null);
-  const [activeSection, setActiveSection] = useState('home');
+  const [, setActiveSection] = useState('home');
   const [glitchActive, setGlitchActive] = useState(false);
 
   const skills = {
@@ -156,13 +156,13 @@ const Main = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <div className="space-y-6">
               <p className="text-lg text-[#808080] hover:text-[#00ced1] transition-colors duration-300">
-                As a second-year B.Tech CSE student, I'm passionate about creating innovative web and mobile solutions. My journey in development started with web technologies and quickly expanded to include mobile development.
+                As a second-year B.Tech CSE student, I&apos;m passionate about creating innovative web and mobile solutions. My journey in development started with web technologies and quickly expanded to include mobile development.
               </p>
               <p className="text-lg text-[#808080] hover:text-[#00ced1] transition-colors duration-300">
-                When I'm not coding, you can find me with pain brush or desining , where I enjoy maintaining a healthy balance between technical growth and creativity.
+                When I&apos;m not coding, you can find me with pain brush or desining , where I enjoy maintaining a healthy balance between technical growth and creativity.
               </p>
               <div className="flex flex-col gap-4 mt-8">
-                <h3 className="text-xl font-semibold text-[#00ced1]">What I'm Currently...</h3>
+                <h3 className="text-xl font-semibold text-[#00ced1]">What I&apos;m Currently...</h3>
                 {['Learning advanced Next.js features', 'Looking for freelance opportunities', 'Building personal projects'].map((item) => (
                   <div key={item} className="flex items-center gap-3 group">
                     <span className="w-2 h-2 bg-[#00ced1] rounded-full group-hover:scale-150 transition-transform duration-300 shadow-sm shadow-[#00ced1]"></span>

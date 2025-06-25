@@ -2,6 +2,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef, useState } from 'react';
+import Image from 'next/image';
 
 const Posters = () => {
   const ref = useRef(null);
@@ -123,7 +124,7 @@ const Posters = () => {
               onClick={() => setSelectedPoster(poster)}
             >
               <div className="relative overflow-hidden rounded-lg shadow-lg">
-                <img
+                <Image
                   src={poster}
                   alt={`Poster ${index + 1}`}
                   className="w-full h-48 md:h-64 lg:h-80 object-cover transition-transform duration-300 group-hover:scale-110"

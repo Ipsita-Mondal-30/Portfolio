@@ -2,6 +2,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
+import Image from 'next/image';
 
 const AboutMe = () => {
   const ref = useRef(null);
@@ -20,7 +21,7 @@ const AboutMe = () => {
         whileHover={{ scale: 1.02 }}
         transition={{ duration: 0.3 }}
       >
-        <img
+        <Image
           src="/web.png"
           alt="Web"
           className="w-full h-full object-cover"
