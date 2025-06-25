@@ -1,7 +1,9 @@
-import Image from "next/image";
+"use client"
+import Mode from "@/app/components/Mode"
+
 
 export default function Home() {
   return (
-    <div>Hello</div>
+    <div><Mode/></div>
   );
 }
