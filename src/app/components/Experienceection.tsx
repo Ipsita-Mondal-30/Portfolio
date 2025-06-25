@@ -5,7 +5,7 @@ import { Code2, Users, Briefcase,  Rocket, Palette, Globe, Award, Building } fro
 
 interface Experience {
   title: string;
-  icon: unknown;
+  icon: React.ElementType;
   description: string;
   type: string;
   color: string;

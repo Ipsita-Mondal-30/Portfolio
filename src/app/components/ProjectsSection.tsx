@@ -4,20 +4,19 @@ import React, { useState } from 'react';
 import {
   ExternalLink,
   Github,
-  Timer,
+  
   Hospital,
-  Gavel,
-  Video,
+  
   MessageSquare,
   Users,
-  Trophy,
+ 
   ShoppingCart,
   CreditCard,
   UserCheck
 } from 'lucide-react';
 
 interface Feature {
-  icon: any;
+  icon: React.ElementType;
   text: string;
 }
 

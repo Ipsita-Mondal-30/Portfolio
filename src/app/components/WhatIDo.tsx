@@ -2,6 +2,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
+import Image from 'next/image';
 
 const WhatIDo = () => {
   const ref = useRef(null);
@@ -21,7 +22,7 @@ const WhatIDo = () => {
           whileHover={{ scale: 1.01 }}
           transition={{ duration: 0.4, ease: "easeOut" }}
         >
-          <img
+          <Image
             src="/what-i-do.png"
             alt="What I Do"
             className="w-full h-full object-cover"

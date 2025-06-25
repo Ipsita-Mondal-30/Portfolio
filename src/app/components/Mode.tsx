@@ -1,6 +1,7 @@
 import { useRef, useEffect, FC } from "react";
 import { motion } from "framer-motion";
 import { useRouter } from 'next/navigation';
+import Image from 'next/image';
 
 // Squares Background Component
 interface SquaresProps {
@@ -119,7 +120,7 @@ const ModeCard: FC<ModeCardProps> = ({ title, description, image, onClick }) => 
       style={{ zIndex: 10 }}
     >
       <div className="aspect-video relative overflow-hidden">
-        <img
+        <Image
           src={image}
           alt={title}
           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
