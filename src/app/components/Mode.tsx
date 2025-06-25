@@ -1,5 +1,6 @@
 import { useRef, useEffect, FC, useState } from "react";
 import { motion } from "framer-motion";
+import { useRouter } from 'next/navigation';
 
 // Squares Background Component
 interface SquaresProps {
@@ -143,26 +144,18 @@ const ModeCard: FC<ModeCardProps> = ({ title, description, image, onClick }) => 
 
 // Main Mode Component
 const Mode: FC = () => {
-  const [showBitmoji, setShowBitmoji] = useState(false);
+  const router = useRouter();
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowBitmoji(true);
-    }, 1000);
 
-    return () => clearTimeout(timer);
-  }, []);
+
 
   const handleDesignClick = () => {
-    console.log("Design mode selected");
-    // Add your navigation logic here
+    router.push('./design'); // ✅
   };
 
   const handleTechClick = () => {
-    console.log("Tech mode selected");
-    // Add your navigation logic here
+    router.push('./tech'); // ✅
   };
-
   return (
     <div className="relative min-h-screen bg-black overflow-hidden">
       {/* Animated Grid Background */}
@@ -216,47 +209,6 @@ const Mode: FC = () => {
         </motion.div>
       </div>
 
-      {/* Bitmoji Character with Speech Bubble */}
-      {showBitmoji && (
-        <motion.div
-          className="fixed bottom-0 left-8 z-30"
-          initial={{ y: 200, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ 
-            duration: 1, 
-            delay: 0.5,
-            type: "spring",
-            stiffness: 100,
-            damping: 15
-          }}
-        >
-          {/* Speech Bubble */}
-          <motion.div
-            className="relative mb-4 ml-16"
-            initial={{ scale: 0, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 0.5, delay: 1.5 }}
-          >
-            
-          </motion.div>
-
-          {/* Bitmoji Character */}
-          <motion.div
-            className="w-32 h-32 md:w-40 md:h-40"
-            animate={{ 
-              y: [0, -10, 0],
-            }}
-            transition={{ 
-              duration: 2,
-              repeat: Infinity,
-              ease: "easeInOut"
-            }}
-          >
-            
-        
-          </motion.div>
-        </motion.div>
-      )}
     </div>
   );
 };
