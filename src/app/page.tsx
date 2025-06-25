@@ -1,9 +1,13 @@
 "use client"
 import Mode from "@/app/components/Mode"
+import { BitmojiChat } from '../app/components/BitmojiChat';
+
 
 
 export default function Home() {
   return (
-    <div><Mode/></div>
+    <div><Mode/>
+    <BitmojiChat />
+    </div>
   );
 }
