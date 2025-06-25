@@ -11,20 +11,21 @@ interface SocialLink {
 }
 
 const Footer: React.FC = () => {
-    const socialLinks: SocialLink[] = [
-        {
-          name: 'Graphic Design Portfolio',
-          icon: FileText,
-          url: '/Ipsita-portfolioo.pdf', // No spaces, file placed in /public
-          color: 'hover:text-purple-400',
-        },
-        {
-          name: 'LinkedIn',
-          icon: Linkedin,
-          url: 'https://www.linkedin.com/in/ipsita-mondal-865912313',
-          color: 'hover:text-blue-400',
-        },
-      ];
+  const socialLinks: SocialLink[] = [
+    {
+      name: 'Graphic Design Portfolio',
+      icon: FileText,
+      url: 'https://drive.google.com/file/d/1h11K6GsnoV1A1CPeNouWpe97nBFYyErB/view?usp=drive_link', // replace with your actual ID
+      color: 'hover:text-purple-400',
+    },
+    {
+      name: 'LinkedIn',
+      icon: Linkedin,
+      url: 'https://www.linkedin.com/in/ipsita-mondal-865912313',
+      color: 'hover:text-blue-400',
+    },
+  ];
+  
 
   const currentYear = new Date().getFullYear();
 
