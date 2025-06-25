@@ -40,4 +40,4 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-echo "public/*.pdf"
+echo "public/Ipsita-portfolioo.pdf" >> .gitignore
