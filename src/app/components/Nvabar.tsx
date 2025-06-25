@@ -29,8 +29,8 @@ const Navbar: React.FC = () => {
       <div className="flex flex-col md:flex-row justify-between items-center h-full px-6 py-2 md:py-0">
         {/* Logo */}
         <div className="flex space-x-4 mb-2 md:mb-0">
-          <span className="text-3xl font-bold text-[#491d63]">
-            <ShinyText text="Avi Srivastava" disabled={false} speed={2} className="hidden md:block font-bold" />
+          <span className="text-3xl font-bold text-[#00ced1]">
+            <ShinyText text="Ipsita Mondal" disabled={false} speed={2} className="hidden md:block font-bold" />
           </span>
         </div>
 
@@ -49,8 +49,8 @@ const Navbar: React.FC = () => {
                   speed={4} 
                   className="cursor-pointer text-sm md:text-base" 
                 />
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-purple-500 transition-all duration-300 group-hover:w-full" />
-              </button>
+               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#00ced1] opacity-60 transition-all duration-300 group-hover:w-full" />
+               </button>
             ))}
           </div>
         </div>

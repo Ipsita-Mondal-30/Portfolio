@@ -1,11 +1,11 @@
 'use client';
 
-import React, { useState, useEffect, useRef, MutableRefObject } from 'react';
-import { Code2, Users, Briefcase, Brain, Rocket, LucideIcon } from 'lucide-react';
+import React, { useState, useEffect, useRef } from 'react';
+import { Code2, Users, Briefcase, Brain, Rocket, Palette, Globe, Award, Building } from 'lucide-react';
 
 interface Experience {
   title: string;
-  icon: LucideIcon;
+  icon: any;
   description: string;
   type: string;
   color: string;
@@ -18,39 +18,60 @@ const ExperienceSection: React.FC = () => {
 
   const experiences: Experience[] = [
     {
-      title: "Alan Turing Club",
-      icon: Brain,
-      description: "Member of the prestigious Alan Turing Club, contributing to computer science and programming initiatives.",
-      type: "Technical Club",
-      color: "from-purple-500 to-blue-500"
+      title: "Head of Design, International Affairs Society",
+      icon: Palette,
+      description: "Leading design strategy and visual communications for international affairs initiatives, managing creative projects and brand identity.",
+      type: "Leadership Role",
+      color: "from-[#00CED1] to-purple-500"
     },
     {
-      title: "Full Stack Club",
+      title: "Front-end Developer, Zenevia Events Team",
       icon: Code2,
-      description: "Active participant in Full Stack Club, working on web development projects and learning cutting-edge technologies.",
-      type: "Development Club",
-      color: "from-pink-500 to-purple-500"
+      description: "Developing responsive web interfaces and interactive event management platforms using modern front-end technologies.",
+      type: "Development Role",
+      color: "from-[#00CED1] to-blue-500"
     },
     {
-      title: "Google Developers Club",
-      icon: Users,
-      description: "Member of Google Developers Club, collaborating on projects and learning about Google technologies.",
-      type: "Tech Community",
-      color: "from-blue-500 to-green-500"
+      title: "Selected for IIT Madras & IIT Bombay ESL",
+      icon: Award,
+      description: "Selected for prestigious English as Second Language programs at top-tier Indian Institutes of Technology.",
+      type: "Academic Achievement",
+      color: "from-[#808080] to-[#00CED1]"
     },
     {
-      title: "Spark (E-Cell)",
-      icon: Rocket,
-      description: "Part of Bennett University's entrepreneurship cell, fostering innovation and business acumen.",
-      type: "Entrepreneurship Cell",
-      color: "from-orange-500 to-red-500"
-    },
-    {
-      title: "Paid Internship",
+      title: "Full Stack Developer Intern, Scalar School of Technology",
       icon: Briefcase,
-      description: "Currently working as a paid intern, gaining real-world experience in software development.",
-      type: "Professional Experience",
-      color: "from-green-500 to-teal-500"
+      description: "Working on full-stack development projects, implementing end-to-end solutions and gaining industry experience.",
+      type: "Technical Internship",
+      color: "from-green-500 to-[#00CED1]"
+    },
+    {
+      title: "HR Intern, TopTrop Foundation",
+      icon: Users,
+      description: "Managing human resources operations, recruitment processes, and organizational development initiatives.",
+      type: "HR Internship",
+      color: "from-orange-500 to-[#808080]"
+    },
+    {
+      title: "In-Cabinet Member, Clubs and Chapters Committee",
+      icon: Building,
+      description: "Strategic committee member overseeing club operations, policy development, and inter-organizational coordination.",
+      type: "Administrative Role",
+      color: "from-purple-500 to-[#00CED1]"
+    },
+    {
+      title: "Social Media Team, Spark E-Cell",
+      icon: Globe,
+      description: "Managing digital presence and social media strategy for the entrepreneurship cell, creating engaging content.",
+      type: "Marketing Role",
+      color: "from-pink-500 to-[#808080]"
+    },
+    {
+      title: "Freelance: Graphic Design & Web Development",
+      icon: Rocket,
+      description: "Providing professional graphic design and web development services to various clients, delivering creative solutions.",
+      type: "Freelance Work",
+      color: "from-[#00CED1] to-black"
     }
   ];
 
@@ -92,25 +113,26 @@ const ExperienceSection: React.FC = () => {
 
   return (
     <div className="min-h-screen py-20 relative" id="experience">
-      <h2 className="text-4xl font-bold mb-12 bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent">
-        Experience & Involvement
-      </h2>
+<h2 className="text-4xl font-bold mb-12 bg-gradient-to-r from-[#00ced1] to-[#00ced1] bg-clip-text text-transparent">
+  Experience & Involvement
+</h2>
+
 
       <div className="space-y-16 relative">
         {/* Base timeline line */}
         <div 
           ref={timelineRef}
-          className="absolute right-8 md:left-1/2 md:transform md:-translate-x-1/2 w-1 bg-purple-600/20"
+          className="absolute right-8 md:left-1/2 md:transform md:-translate-x-1/2 w-1 bg-[#808080]/20"
           style={{ height: 'calc(100% - 100px)', top: '50px' }}
         />
 
         {/* Glowing timeline overlay */}
         <div 
-          className="absolute right-8 md:left-1/2 md:transform md:-translate-x-1/2 w-1 bg-gradient-to-b from-purple-500 to-pink-500 transition-all duration-500"
+          className="absolute right-8 md:left-1/2 md:transform md:-translate-x-1/2 w-1 bg-gradient-to-b from-[#00CED1] to-[#808080] transition-all duration-500"
           style={{
             height: getLineGlowHeight(),
             top: '50px',
-            boxShadow: '0 0 20px rgba(147, 51, 234, 0.5)',
+            boxShadow: '0 0 20px rgba(0, 206, 209, 0.5)',
             opacity: activeCheckpoints.size > 0 ? 1 : 0
           }}
         />
@@ -128,18 +150,18 @@ const ExperienceSection: React.FC = () => {
             <div
               className={`absolute right-8 md:left-1/2 md:transform md:-translate-x-1/2 w-4 h-4 rounded-full border-4 z-10 transition-all duration-500
                 ${activeCheckpoints.has(index)
-                  ? 'bg-purple-500 border-purple-300 shadow-[0_0_15px_rgba(147,51,234,0.5)]'
-                  : 'bg-purple-600 border-purple-900'
+                  ? 'bg-[#00CED1] border-white shadow-[0_0_15px_rgba(0,206,209,0.5)]'
+                  : 'bg-[#808080] border-black'
                 }`}
             />
 
             {/* Experience Card */}
             <div className={`w-full md:w-5/12 p-6 rounded-xl transition-all duration-500
               ${activeCheckpoints.has(index) 
-                ? 'bg-purple-900/40 scale-105' 
-                : 'bg-purple-900/20'
+                ? 'bg-gray-900/60 scale-105 border-[#00CED1]' 
+                : 'bg-black/40 border-[#808080]/30'
               } 
-              border border-purple-600/30
+              border
               ${index % 2 === 0 ? 'md:mr-auto pr-12 md:pr-6' : 'md:ml-auto pl-12 md:pl-6'}`}
             >
               <div className="flex items-start gap-4">
@@ -148,8 +170,8 @@ const ExperienceSection: React.FC = () => {
                   <exp.icon size={24} className="text-white" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-purple-300">{exp.title}</h3>
-                  <span className="text-sm text-purple-400">{exp.type}</span>
+                  <h3 className="text-xl font-semibold text-[#00CED1]">{exp.title}</h3>
+                  <span className="text-sm text-[#808080]">{exp.type}</span>
                   <p className="mt-3 text-gray-300">{exp.description}</p>
                 </div>
               </div>
@@ -161,8 +183,8 @@ const ExperienceSection: React.FC = () => {
                     key={skill}
                     className={`px-2 py-1 text-xs rounded-full transition-all duration-500
                       ${activeCheckpoints.has(index)
-                        ? 'bg-purple-600/30 text-purple-200'
-                        : 'bg-purple-600/20 text-purple-300'}`}
+                        ? 'bg-[#00CED1]/30 text-white'
+                        : 'bg-[#808080]/20 text-[#808080]'}`}
                   >
                     {skill}
                   </span>
@@ -176,22 +198,26 @@ const ExperienceSection: React.FC = () => {
   );
 };
 
-// ✅ Type-safe helper function
+// Type-safe helper function
 const getRelevantSkills = (title: string): string[] => {
-  switch (title) {
-    case "Alan Turing Club":
-      return ["Algorithms", "Problem Solving", "Competitive Programming"];
-    case "Full Stack Club":
-      return ["MERN Stack", "Web Development", "UI/UX"];
-    case "Google Developers Club":
-      return ["Google Cloud", "Firebase", "Android"];
-    case "Spark (E-Cell)":
-      return ["Leadership", "Innovation", "Entrepreneurship"];
-    case "Paid Internship":
-      return ["Professional Development", "Team Collaboration", "Real-world Projects"];
-    default:
-      return [];
+  if (title.includes("Head of Design")) {
+    return ["Creative Direction", "Brand Strategy", "Visual Design", "Team Leadership"];
+  } else if (title.includes("Front-end Developer")) {
+    return ["React", "JavaScript", "UI/UX", "Responsive Design"];
+  } else if (title.includes("IIT")) {
+    return ["Academic Excellence", "Communication", "Technical Writing"];
+  } else if (title.includes("Full Stack Developer")) {
+    return ["MERN Stack", "API Development", "Database Design", "DevOps"];
+  } else if (title.includes("HR Intern")) {
+    return ["Recruitment", "Employee Relations", "Organizational Development"];
+  } else if (title.includes("In-Cabinet")) {
+    return ["Strategic Planning", "Policy Development", "Committee Management"];
+  } else if (title.includes("Social Media")) {
+    return ["Content Creation", "Digital Marketing", "Brand Management"];
+  } else if (title.includes("Freelance")) {
+    return ["Client Management", "Project Delivery", "Creative Solutions"];
   }
+  return [];
 };
 
 export default ExperienceSection;
